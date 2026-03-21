@@ -1,14 +1,32 @@
-"use client"
+"use client";
 import { useRouter } from "next/navigation";
 
-const page = () => {
+const Page = () => {
+  const router = useRouter();
 
-  const router = useRouter()
   return (
-    <div>Test to speech
-      <button onClick={() => router.push("/climb")}>Text to speech using climb</button>
-    </div>
-  )
-}
+    <div className="min-h-screen flex items-center justify-center bg-black px-4">
+      <div className="w-full max-w-md text-center space-y-6">
+        <h1 className="text-white text-2xl font-semibold tracking-tight">
+          Text to Speech
+        </h1>
 
-export default page
+        <button
+          onClick={() => router.push("/climb")}
+          className="w-full py-3 border border-white text-white rounded-lg transition hover:bg-white hover:text-black"
+        >
+          Text to speech using climb
+        </button>
+
+            <button
+          onClick={() => router.push("/elevn")}
+          className="w-full py-3 border border-white text-white rounded-lg transition hover:bg-white hover:text-black"
+        >
+          Text to speech using 11Labs
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Page;
