@@ -24,6 +24,13 @@ const Page = () => {
         >
           Text to speech using elevenlabs(not working due to overeuse of free trial key)
         </button>
+        
+            <button
+          onClick={() => router.push("/sarvam")}
+          className="w-full py-3 border border-white text-white rounded-lg transition hover:bg-white hover:text-black"
+        >
+          Text to speech using sarvam
+        </button>
       </div>
     </div>
   );

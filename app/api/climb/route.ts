@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
     // We get the full ArrayBuffer then wrap it in a ReadableStream
     // so the client still receives it as a streaming chunked response
     const arrayBuffer = await response.arrayBuffer();
-
+    console.log("array buffer  lenght", arrayBuffer.byteLength);
     const chunkSize = 16 * 1024; // 16KB chunks
     let offset = 0;
 
